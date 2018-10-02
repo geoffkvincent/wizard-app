@@ -46,8 +46,11 @@ class Profile extends React.Component {
     dispatch(updateUser(user.id, formValues))
     this.setState( state => {
       return {
-        
-      }
+        editing: false,
+        formValues: {
+          ...state.formValues,
+          file: ''
+        }
       }
     })
   }
